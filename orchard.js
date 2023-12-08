@@ -35,8 +35,11 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 
 // CODE HERE
 
-
-
+let totalAcres = 0 // initialize a variable for total acres that is mutable
+for (let i = 0; i < 7; i ++){ // the for loop needs to iterate over the course of the week. Start the i at 0 for index 0, run the loop until it reaches 7 and increment by 1 each loop
+    totalAcres = totalAcres + fujiAcres[i] + galaAcres[i]+ pinkAcres[i] // during each loop update the variable totalAcres by adding the value at the given index in the acres array
+}
+console.log(totalAcres); // console log to confirm loop is functioning correctly
 
 
 // PROBLEM 2
@@ -52,8 +55,9 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 
 // CODE HERE
 
+let averageDailyAcres = totalAcres/fujiAcres.length // should I hard code this at 7 given the context of the problem? Or use length to allow it to be responsive to any changes in the individual acres arrays?
 
-
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -83,8 +87,12 @@ let days = 0
 
 // CODE HERE
 
+while (acresLeft >= 0 ){
+    acresLeft = acresLeft - averageDailyAcres
+    days += 1
+} // based on the directions given in the problem it is requesting a while loop.  Decrement the acres lef by the average, and increment the days to track the number of days
 
-
+console.log(days);
 // PROBLEM 4
 
 /*
@@ -108,7 +116,14 @@ let fujiTons = [];
 let galaTons = [];
 let pinkTons = [];
 
-
+for (let d = 0; d < 7; d++){ //similar for loop to iterate by 1 each loop over the course of a week
+    fujiTons.push(fujiAcres[d]*6.5); // for each loop, add the value at the index of the apple acre array multiplied by 6.5 for tons of apples
+    galaTons.push(galaAcres[d]*6.5);
+    pinkTons.push(pinkAcres[d]*6.5)
+}
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
 // PROBLEM 5
 
@@ -117,15 +132,27 @@ let pinkTons = [];
 
     You'll need to add up the tons per each variety and convert the number 
     into pounds -- store that number in the variables given below. 
-
     Log each of the values to the console.
 
     Hint: there are 2000 pounds in a ton.
 */
 
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
+
+
 // CODE HERE 
 
+for ( j = 0; j < 7; j++){
+    fujiPounds = fujiPounds + (fujiTons[j] * 2000); // for each loop, increase the pounds variable by the value of the index of the tons array multipled by 2000 to convert to tons
+    galaPounds = galaPounds + (galaTons[j] * 2000);
+    pinkPounds = pinkPounds + (pinkTons[j] * 2000);
+}
 
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
 
 // PROBLEM 6
 
@@ -143,9 +170,14 @@ const pinkPrice = .55
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPrice * fujiPounds;
+let galaProfit = galaPrice * galaPounds;
+let pinkProfit = pinkPrice *  pinkPounds;
+
+
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
 
 
@@ -160,3 +192,6 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+
+let totalProfit = galaProfit + fujiProfit + pinkProfit;
+console.log(totalProfit);
