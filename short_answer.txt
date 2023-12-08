@@ -1,14 +1,14 @@
 1) What does the `rm` command in the terminal do?
 
 Your answer:
-
+It removes the directory or file.
 
 ------------------
 2) What terminal command would you use to list all the files and folder in the 
    current directory?
 
 Your answer:
-
+ls would list all of the files
 
 ------------------
 3) Explain the difference between these two commands in the terminal:
@@ -17,18 +17,18 @@ Your answer:
    $ cd /Users
 
 Your answer:
-
-
+cd Users naviages to Users via a relative path 
+while cd /Users is an absolute path to a directory 
 ------------------
 4) Describe what git is and what it is used for.
 
-Your answer:
+Your answer: git is a system of version control for a directory/repository on your device. It allows a user to save, change, edit, revert, and branch on a directory, instead of having to create multiple files to track changes.
 
 
 ------------------
 5) Describe what GitHub is and what it is used for.
 
-Your answer:
+Your answer: GitHub allows developers to collaborate on repositories, securely share code, collabroate, and connect socially. 
 
 
 ------------------
@@ -38,7 +38,7 @@ Your answer:
     c) git init
     d) git status
 
-Your answer:
+Your answer: git init initializes a new repository on your device
 
 ------------------
 7) You want to check that you have properly added all the files you want to be
@@ -48,24 +48,23 @@ Your answer:
      c) git status
      d) git remote
 
-Your answer:
+Your answer: git status will provide an output on the current state of the working version of the repository.
 
 
 ------------------
 8) What is the difference between `git add` and `git commit`?
 
 Your answer:
-
+Git add states the changes you are making on the current working version while git commit saves the changes to that version.
 
 ------------------
 9) What does the `git push` command do?
 
 Your answer:
-
+Git push allows you to upload the local version of your repository to a remote server
 
 ------------------
 10) When would you use the `git clone` command?
 
 Your answer:
-
-
+You would use the git clone command when you want to make a copy of a repository that is remote on your device locally, versus working on a branch or fork of the repo.
